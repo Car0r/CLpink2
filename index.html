@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f9dce7">
+  <meta name="description" content="CL Pink — moda feminina online.">
+  <title>CL Pink | Moda Feminina</title>
+  <style>
+    :root {
+      --pink: #f9dce7;
+      --pink-light: #fff6fa;
+      --pink-mid: #edb9cc;
+      --pink-dark: #9f526f;
+      --gold: #c8a66a;
+      --ink: #4b303b;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      background: #fffafb;
+    }
+    header {
+      padding: 20px 6%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fffafb;
+      border-bottom: 1px solid #f4e4ea;
+    }
+    .brand {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: .13em;
+      font-weight: 500;
+      color: var(--pink-dark);
+    }
+    .hero {
+      min-height: 380px;
+      height: min(62vw, 560px);
+      max-height: 560px;
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(ellipse at 15% 20%, rgba(255,255,255,.9) 0 2%, transparent 28%),
+        radial-gradient(ellipse at 85% 80%, rgba(255,255,255,.7) 0 3%, transparent 30%),
+        linear-gradient(135deg, #fbe8ef 0%, #f6cddc 42%, #fbeaf1 70%, #edc1d1 100%);
+    }
+    /* Detalhes decorativos do banner, sem textos ou logotipos */
+    .hero::before, .hero::after {
+      content: "";
+      position: absolute;
+      width: 42vw;
+      height: 42vw;
+      max-width: 500px;
+      max-height: 500px;
+      min-width: 250px;
+      min-height: 250px;
+      border: 1px solid rgba(200,166,106,.55);
+      border-radius: 48% 52% 65% 35% / 42% 45% 55% 58%;
+      transform: rotate(-24deg);
+    }
+    .hero::before { left: -12%; top: -35%; box-shadow: 0 0 0 14px rgba(255,255,255,.14), 0 0 0 28px rgba(200,166,106,.08); }
+    .hero::after { right: -10%; bottom: -48%; transform: rotate(28deg); box-shadow: 0 0 0 14px rgba(255,255,255,.2), 0 0 0 28px rgba(200,166,106,.08); }
+    .sparkle {
+      position: absolute;
+      color: rgba(200,166,106,.85);
+      font-size: 24px;
+      user-select: none;
+    }
+    .s1 { top: 22%; left: 24%; }
+    .s2 { top: 31%; right: 22%; font-size: 17px; }
+    .s3 { bottom: 22%; left: 38%; font-size: 15px; }
+    .s4 { bottom: 30%; right: 35%; font-size: 21px; }
+    .hero-ribbon {
+      position: absolute;
+      width: 75%;
+      height: 42%;
+      border-top: 1px solid rgba(255,255,255,.7);
+      border-bottom: 1px solid rgba(200,166,106,.25);
+      border-radius: 50%;
+      transform: rotate(-8deg);
+    }
+    main { padding: 52px 20px 60px; text-align: center; }
+    .intro {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+      color: #775b66;
+      font-size: 1rem;
+    }
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .contact-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      min-width: 210px;
+      padding: 15px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: .98rem;
+      font-weight: 600;
+      transition: transform .2s ease, box-shadow .2s ease;
+      box-shadow: 0 7px 18px rgba(159,82,111,.12);
+    }
+    .contact-button:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(159,82,111,.2); }
+    .instagram { background: #f2d2df; color: #713b52; border: 1px solid #e8b9cc; }
+    .whatsapp { background: #fff; color: #6d4555; border: 1px solid #e9ccd7; }
+    .contact-button svg { width: 21px; height: 21px; flex: 0 0 auto; }
+    footer {
+      padding: 24px 16px;
+      text-align: center;
+      background: #f9e5ed;
+      color: #875a6d;
+      font-size: .9rem;
+      letter-spacing: .02em;
+      border-top: 1px solid #efd1dd;
+    }
+    footer span { color: var(--pink-dark); font-weight: 700; }
+    @media (max-width: 520px) {
+      header { padding: 18px 12px; }
+      .hero { min-height: 300px; height: 78vw; }
+      main { padding: 38px 18px 46px; }
+      .contact-buttons { flex-direction: column; }
+      .contact-button { width: min(100%, 330px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="brand">CL PINK</h1>
+  </header>
+
+  <section class="hero" aria-label="Banner decorativo rosa bebê">
+    <div class="hero-ribbon" aria-hidden="true"></div>
+    <span class="sparkle s1" aria-hidden="true">✧</span>
+    <span class="sparkle s2" aria-hidden="true">✦</span>
+    <span class="sparkle s3" aria-hidden="true">✧</span>
+    <span class="sparkle s4" aria-hidden="true">✦</span>
+  </section>
+
+  <main>
+    <p class="intro">Entre em contato com a CL Pink e acompanhe as novidades da nossa loja online.</p>
+    <div class="contact-buttons">
+      <a class="contact-button instagram" href="https://www.instagram.com/CLpink.loja/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram da CL Pink">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="17.5" cy="6.8" r="1.1" fill="currentColor"/>
+        </svg>
+        Instagram
+      </a>
+      <a class="contact-button whatsapp" href="https://wa.me/5512988449413" target="_blank" rel="noopener noreferrer" aria-label="Conversar com a CL Pink pelo WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L3 20l1.2-4.9A8.2 8.2 0 1 1 20.2 11.7Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+          <path d="M8.5 7.8c.2-.4.4-.4.7-.4h.4c.2 0 .3.1.4.4l.7 1.6c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.3 0 .6.5.9 1.2 1.6 2.1 2.1.3.2.4.2.6 0l.8-.9c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.2.4.4 0 .4-.2 1.1-.7 1.5-.5.5-1.2.7-1.9.6-1.1-.2-2.4-.8-3.7-2-1.2-1.1-2-2.5-2.2-3.5-.2-.8.1-1.6.6-2.3.2-.2.3-.3.4-.3Z" fill="currentColor"/>
+        </svg>
+        WhatsApp
+      </a>
+    </div>
+  </main>
+
+  <footer>Feito com carinho por <span>Carolina e Daniela</span> ♡</footer>
+</body>
+</html>
